@@ -109,7 +109,8 @@
 
         xADUser DBAUser
         {
-            Ensure = "Present"
+            Ensure = 'Present'
+            DomainName = $DomainName
             UserName = 'dba'
             Password = $Admincreds.GetNetworkCredential().Password
             DependsOn = "[xADDomain]FirstDS"
@@ -118,6 +119,7 @@
         xADGroup SQLTeam
         {
             Ensure = "Present"
+            DomainName = $DomainName
             GroupName = 'SQLTeam'
             Category = 'Security'
             GroupScope = 'Global'
