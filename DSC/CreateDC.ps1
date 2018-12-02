@@ -119,7 +119,6 @@
         xADGroup SQLTeam
         {
             Ensure = "Present"
-            DomainName = $DomainName
             GroupName = 'SQLTeam'
             Category = 'Security'
             GroupScope = 'Global'
